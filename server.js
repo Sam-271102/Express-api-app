@@ -1,13 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const cors = require('cors'); // ✅ declared only once
 const path = require('path');
 require('dotenv').config();
 
-const app = express(); // <== app is created here FIRST
-const cors = require('cors');
-app.use(cors());
+const app = express(); // ✅ now it's safe to use app.use
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
