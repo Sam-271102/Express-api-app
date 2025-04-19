@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h2 Add Skill
+  form(action="/admin/skills" method="POST")
+    input(type="text" name="name" placeholder="Skill Name" required)
+    select(name="level")
+      option(value="Beginner") Beginner
+      option(value="Intermediate") Intermediate
+      option(value="Advanced") Advanced
+    button(type="submit") Submit

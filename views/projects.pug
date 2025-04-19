@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h2 Add Project
+  form(action="/admin/projects" method="POST")
+    input(type="text" name="title" placeholder="Title" required)
+    textarea(name="description" placeholder="Description" required)
+    input(type="text" name="technologies" placeholder="Technologies (comma separated)" required)
+    input(type="text" name="link" placeholder="Project Link")
+    button(type="submit") Submit
